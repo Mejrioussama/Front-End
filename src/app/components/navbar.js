@@ -155,7 +155,7 @@ export default function Navbar({navDark, manuClass,containerClass}){
                         </Offcanvas.Body>
                         <div className="offcanvas-footer p-4 border-top text-center">
                             <ul className="list-unstyled social-icon social mb-0">
-                                <li className="list-inline-item mb-0"><Link href="https://1.envato.market/doctris-react" target="_blank" className="rounded"><FiShoppingCart className="align-middle mb-0"/></Link></li>
+                                <li className="list-inline-item mb-0"><Link href="https://1.envato.market/doctris-next" target="_blank" className="rounded"><FiShoppingCart className="align-middle mb-0"/></Link></li>
                                 <li className="list-inline-item mb-0"><Link href="https://dribbble.com/shreethemes" target="_blank" className="rounded"><FiDribbble className="align-middle mb-0"/></Link></li>
                                 <li className="list-inline-item mb-0"><Link href="https://www.behance.net/shreethemes" target="_blank" className="rounded"><RiBehanceLine className="align-middle mb-0"/></Link></li>
                                 <li className="list-inline-item mb-0"><Link href="https://www.facebook.com/shreethemes" target="_blank" className="rounded"><FaFacebookF className="align-middle mb-0"/></Link></li>
@@ -197,23 +197,12 @@ export default function Navbar({navDark, manuClass,containerClass}){
                     </Offcanvas>
 
                     <li className="list-inline-item mb-0 ms-1">
-                        <div className="dropdown dropdown-primary">
-                            <button type="button" className="btn btn-pills btn-soft-primary dropdown-toggle p-0" onClick={()=>setModal(!modal)}><Image src='/images/doctors/01.jpg' width={36} height={36} className="avatar avatar-ex-small rounded-circle" alt=""/></button>
-                            <div className={`${modal === true ? 'show' : ''} dropdown-menu dd-menu dropdown-menu-end shadow border-0 mt-3 py-3`} style={{minWidth:"200px", right:'0'}}>
-                                <Link className="dropdown-item d-flex align-items-center text-dark" href="/doctor-profile">
-                                    <Image src='/images/doctors/01.jpg' width={45} height={45} className="avatar avatar-md-sm rounded-circle border shadow" alt=""/>
-                                    <div className="flex-1 ms-2">
-                                        <span className="d-block mb-1">Calvin Carlo</span>
-                                        <small className="text-muted">Orthopedic</small>
-                                    </div>
-                                </Link>
-                                <Link className="dropdown-item text-dark mb-2" href="/doctor-dashboard"><span className="mb-0 d-inline-block me-1"><GrDashboard className="align-middle h6 mb-0"/></span> Dashboard</Link>
-                                <Link className="dropdown-item text-dark" href="/doctor-profile-setting"><span className="mb-0 d-inline-block me-1"><FiSettings className="align-middle h6 mb-0"/></span> Profile Settings</Link>
-                                <div className="dropdown-divider border-top"></div>
-                                <Link className="dropdown-item text-dark" href="/login"><span className="mb-0 d-inline-block me-1"><LiaSignOutAltSolid className="align-middle h6 mb-0"/></span> Logout</Link>
-                            </div>
-                        </div>
+                    <div className="d-flex">
+                    <Link className="btn btn-primary me-2" href="/login">Se connecter</Link>
+                    <Link className="btn btn-outline-primary" href="/signup">S'inscrire</Link>
+                    </div>
                     </li>
+
                 </ul>
 
                 <div id="navigation" style={{ display: isMenu ? 'block' : 'none' }}>
@@ -232,67 +221,24 @@ export default function Navbar({navDark, manuClass,containerClass}){
                             <ul className="submenu">
                                 <li className={`${["/doctor-dashboard", "/doctor-appointment","/patient-list", "/doctor-schedule","/invoices","/patient-review","/doctor-messages","/doctor-profile","/doctor-profile-setting","/doctor-chat","/login","/signup","/forgot-password"].includes(manu)? "active" : ""} has-submenu parent-menu-item`}>
                                     <Link href="#" className="menu-item"> Dashboard </Link><span className="submenu-arrow"></span>
-                                    <ul className="submenu">
-                                        <li className={manu === "/doctor-dashboard" ? "active" : ""}><Link href="/doctor-dashboard" className="sub-menu-item">Dashboard</Link></li>
-                                        <li className={manu === "/doctor-appointment" ? "active" : ""}><Link href="/doctor-appointment" className="sub-menu-item">Appointment</Link></li>
-                                        <li className={manu === "/patient-list" ? "active" : ""}><Link href="/patient-list" className="sub-menu-item">Patients</Link></li>
-                                        <li className={manu === "/doctor-schedule" ? "active" : ""}><Link href="/doctor-schedule" className="sub-menu-item">Schedule Timing</Link></li>
-                                        <li className={manu === "/invoices" ? "active" : ""}><Link href="/invoices" className="sub-menu-item">Invoices</Link></li>
-                                        <li className={manu === "/patient-review" ? "active" : ""}><Link href="/patient-review" className="sub-menu-item">Reviews</Link></li>
-                                        <li className={manu === "/doctor-messages" ? "active" : ""}><Link href="/doctor-messages" className="sub-menu-item">Messages</Link></li>
-                                        <li className={manu === "/doctor-profile" ? "active" : ""}><Link href="/doctor-profile" className="sub-menu-item">Profile</Link></li>
-                                        <li className={manu === "/doctor-profile-setting" ? "active" : ""}><Link href="/doctor-profile-setting" className="sub-menu-item">Profile Settings</Link></li>
-                                        <li className={manu === "/doctor-chat" ? "active" : ""}><Link href="/doctor-chat" className="sub-menu-item">Chat</Link></li>
-                                        <li className={manu === "/login" ? "active" : ""}><Link href="/login" className="sub-menu-item">Login</Link></li>
-                                        <li className={manu === "/signup" ? "active" : ""}><Link href="/signup" className="sub-menu-item">Sign Up</Link></li>
-                                        <li  className={manu === "/forgot-password" ? "active" : ""}><Link href="/forgot-password" className="sub-menu-item">Forgot Password</Link></li>
-                                    </ul>
+                                    
                                 </li>
-                                <li className={manu === "/doctor-team-one" ? "active" : ""}><Link href="/doctor-team-one" className="sub-menu-item">Doctors One</Link></li>
-                                <li className={manu === "/doctor-team-two" ? "active" : ""}><Link href="/doctor-team-two" className="sub-menu-item">Doctors Two</Link></li>
-                                <li className={manu === "/doctor-team-three" ? "active" : ""}><Link href="/doctor-team-three" className="sub-menu-item">Doctors Three</Link></li>
+                                
                             </ul>
                         </li>
 
                         <li className={`${["/patient-dashboard", "/patient-profile","/booking-appointment", "/patient-invoice"].includes(manu)? "active" : ""} has-submenu parent-menu-item`}>
                             <Link href="#">Patients</Link><span className="menu-arrow"></span>
-                            <ul className="submenu">
-                                <li className={manu === "/patient-dashboard" ? "active" : ""}><Link href="/patient-dashboard" className="sub-menu-item">Dashboard</Link></li>
-                                <li className={manu === "/patient-profile" ? "active" : ""}><Link href="/patient-profile" className="sub-menu-item">Profile</Link></li>
-                                <li className={manu === "/booking-appointment" ? "active" : ""}><Link href="/booking-appointment" className="sub-menu-item">Book Appointment</Link></li>
-                                <li className={manu === "/patient-invoice" ? "active" : ""}><Link href="/patient-invoice" className="sub-menu-item">Invoice</Link></li>
-                            </ul>
+                            
                         </li>
 
                         <li className={`${["/pharmacy", "/pharmacy-shop","/pharmacy-product-detail", "/pharmacy-shop-cart","/pharmacy-checkout","/pharmacy-account"].includes(manu)? "active" : ""} has-submenu parent-menu-item`}>
                             <Link href="#">Pharmacy</Link><span className="menu-arrow"></span>
-                            <ul className="submenu">
-                                <li className={manu === "/pharmacy" ? "active" : ""}><Link href="/pharmacy" className="sub-menu-item">Pharmacy</Link></li>
-                                <li className={manu === "/pharmacy-shop" ? "active" : ""}><Link href="/pharmacy-shop" className="sub-menu-item">Shop</Link></li>
-                                <li className={manu === "/pharmacy-product-detail" ? "active" : ""}><Link href="/pharmacy-product-detail" className="sub-menu-item">Medicine Detail</Link></li>
-                                <li className={manu === "/pharmacy-shop-cart" ? "active" : ""}><Link href="/pharmacy-shop-cart" className="sub-menu-item">Shop Cart</Link></li>
-                                <li className={manu === "/pharmacy-checkout" ? "active" : ""}><Link href="/pharmacy-checkout" className="sub-menu-item">Checkout</Link></li>
-                                <li  className={manu === "/pharmacy-account" ? "active" : ""}><Link href="/pharmacy-account" className="sub-menu-item">Account</Link></li>
-                            </ul>
+                            
                         </li>
 
-                        <li className={`${["/aboutus", "/departments","/faqs", "/blogs","/blog-detail","/terms","/privacy","/error","/contact"].includes(manu)? "active" : ""} has-submenu parent-parent-menu-item`}><Link href="#">Pages</Link><span className="menu-arrow"></span>
-                            <ul className="submenu">
-                                <li className={manu === "/aboutus" ? "active" : ""}><Link href="/aboutus" className="sub-menu-item"> About Us</Link></li>
-                                <li className={manu === "/departments" ? "active" : ""}><Link href="/departments" className="sub-menu-item">Departments</Link></li>
-                                <li className={manu === "/faqs" ? "active" : ""}><Link href="/faqs" className="sub-menu-item">FAQs</Link></li>
-                                <li className={`${["/blogs", "/blog-detail"].includes(manu)? "active" : ""} has-submenu parent-menu-item`}>
-                                    <Link href="#" className="menu-item"> Blogs </Link><span className="submenu-arrow"></span>
-                                    <ul className="submenu">
-                                        <li className={manu === "/blogs" ? "active" : ""}><Link href="/blogs" className="sub-menu-item">Blogs</Link></li>
-                                        <li className={manu === "/blog-detail" ? "active" : ""}><Link href="/blog-detail" className="sub-menu-item">Blog Details</Link></li>
-                                    </ul>
-                                </li>
-                                <li className={manu === "/terms" ? "active" : ""}><Link href="/terms" className="sub-menu-item">Terms & Policy</Link></li>
-                                <li className={manu === "/privacy" ? "active" : ""}><Link href="/privacy" className="sub-menu-item">Privacy Policy</Link></li>
-                                <li className={manu === "/error" ? "active" : ""}><Link href="/error" className="sub-menu-item">404 !</Link></li>
-                                <li className={manu === "/contact" ? "active" : ""}><Link href="/contact" className="sub-menu-item">Contact</Link></li>
-                            </ul>
+                        <li className={`${["/aboutus", "/departments","/faqs", "/blogs","/blog-detail","/terms","/privacy","/error"].includes(manu)? "active" : ""} has-submenu parent-parent-menu-item`}><Link href="#">Pages</Link><span className="menu-arrow"></span>
+                          
                         </li>
                     </ul>
                 </div>

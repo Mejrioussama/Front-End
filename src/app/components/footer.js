@@ -22,27 +22,12 @@ export default function Footer(){
                         <div className="row">
                             <div className="col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                                 <h5 className="footer-head">Company</h5>
-                                <ul className="list-unstyled footer-list mt-4">
-                                    <li><Link href="/aboutus" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> About us</Link></li>
-                                    <li><Link href="/departments" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Services</Link></li>
-                                    <li><Link href="/doctor-team-two" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Team</Link></li>
-                                    <li><Link href="/blog-detail" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Project</Link></li>
-                                    <li><Link href="/blogs" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Blog</Link></li>
-                                    <li><Link href="/login" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Login</Link></li>
-                                </ul>
+                              
                             </div>
                     
                             <div className="col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
                                 <h5 className="footer-head">Departments</h5>
-                                <ul className="list-unstyled footer-list mt-4">
-                                    <li><Link href="/departments" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Eye Care</Link></li>
-                                    <li><Link href="/departments" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Psychotherapy</Link></li>
-                                    <li><Link href="/departments" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Dental Care</Link></li>
-                                    <li><Link href="/departments" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Orthopedic</Link></li>
-                                    <li><Link href="/departments" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Cardiology</Link></li>
-                                    <li><Link href="/departments" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Gynecology</Link></li>
-                                    <li><Link href="/departments" className="text-foot"><i className="mdi mdi-chevron-right me-1"></i> Neurology</Link></li>
-                                </ul>
+                               
                             </div>
                     
                             <div className="col-md-4 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
